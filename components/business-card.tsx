@@ -16,9 +16,9 @@ export function BusinessCard({ business }: BusinessCardProps) {
   return (
     <Link
       href={`/business/${business.id}`}
-      className="group block overflow-hidden rounded-2xl bg-card border border-border shadow-sm transition-shadow hover:shadow-md active:scale-[0.98]"
+      className="group block overflow-hidden rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-[16/10] overflow-hidden">
         <Image
           src={business.images[0]}
           alt={business.name}
@@ -33,22 +33,21 @@ export function BusinessCard({ business }: BusinessCardProps) {
         )}
       </div>
 
-      <div className="p-3">
+      <div className="p-3.5">
         <h3 className="font-semibold text-foreground line-clamp-1 text-base">
           {business.name}
         </h3>
 
-        <div className="mt-1.5 flex items-center gap-2">
-          <div className="flex items-center gap-1">
-            <Star className="h-3.5 w-3.5 fill-accent text-accent" />
-            <span className="text-sm font-medium text-foreground">{business.rating}</span>
+        <div className="mt-2 flex items-center gap-1.5">
+          <div className="flex items-center gap-1 bg-amber-50 px-1.5 py-0.5 rounded">
+            <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
+            <span className="text-sm font-semibold text-amber-700">{business.rating}</span>
           </div>
-          <span className="text-muted-foreground">·</span>
-          <span className="text-sm text-muted-foreground">{business.reviewCount} đánh giá</span>
+          <span className="text-sm text-muted-foreground">({business.reviewCount} đánh giá)</span>
         </div>
 
-        <div className="mt-2 flex items-center gap-1.5 text-muted-foreground">
-          <MapPin className="h-3.5 w-3.5 flex-shrink-0" />
+        <div className="mt-2.5 flex items-center gap-1.5 text-muted-foreground">
+          <MapPin className="h-3.5 w-3.5 flex-shrink-0 text-primary/70" />
           <span className="text-sm line-clamp-1">{business.district}</span>
         </div>
 

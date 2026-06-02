@@ -26,10 +26,14 @@ export function CitySelector({ selectedCity = 'hanoi', onCityChange }: CitySelec
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="h-8 gap-1 px-2 text-muted-foreground">
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          className="h-10 gap-1.5 px-3 bg-secondary/80 hover:bg-secondary rounded-xl text-foreground"
+        >
           <MapPin className="h-4 w-4 text-primary" />
-          <span className="text-sm font-medium text-foreground">{currentCity.name}</span>
-          <ChevronDown className="h-3 w-3" />
+          <span className="text-sm font-medium">{currentCity.name}</span>
+          <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-40">

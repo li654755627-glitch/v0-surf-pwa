@@ -20,20 +20,20 @@ export function BusinessFeed({
     : businesses
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold text-foreground">Khám phá gần đây</h2>
       </div>
 
       {/* Category filter pills */}
-      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-1 px-1">
         <button
           onClick={() => onCategoryChange?.(null)}
           className={cn(
-            'flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
+            'flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors',
             !selectedCategory
-              ? 'bg-primary text-primary-foreground'
-              : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+              ? 'bg-primary text-primary-foreground shadow-sm'
+              : 'bg-muted text-foreground hover:bg-muted/80'
           )}
         >
           Tất cả
@@ -43,10 +43,10 @@ export function BusinessFeed({
             key={category.id}
             onClick={() => onCategoryChange?.(category.id)}
             className={cn(
-              'flex-shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
+              'flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors',
               selectedCategory === category.id
-                ? 'bg-primary text-primary-foreground'
-                : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+                ? 'bg-primary text-primary-foreground shadow-sm'
+                : 'bg-muted text-foreground hover:bg-muted/80'
             )}
           >
             {category.nameVi}

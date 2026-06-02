@@ -41,8 +41,13 @@ export default function HomePage() {
 
       {/* Main Content */}
       <main className="px-4 space-y-6">
+        {/* Hero Text */}
+        <section className="pt-1">
+          <h1 className="text-xl font-bold text-foreground">Tìm quán ăn & dịch vụ gần bạn</h1>
+        </section>
+
         {/* Search Bar */}
-        <section className="pt-2">
+        <section>
           <SearchBar 
             value={searchQuery} 
             onChange={setSearchQuery} 
