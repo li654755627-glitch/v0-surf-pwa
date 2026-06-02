@@ -31,7 +31,7 @@ export const mockBusinesses: Business[] = [
     phone: '024 3943 4106',
     openingHours: { open: '10:00', close: '21:00', isOpen: true },
     images: [
-      'https://images.unsplash.com/photo-1569058242567-93de6f36f8eb?w=400&h=300&fit=crop',
+      'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400&h=300&fit=crop',
     ],
     priceRange: '40.000đ - 80.000đ',
     description: 'Bún chả nổi tiếng Obama từng ghé thăm.',
