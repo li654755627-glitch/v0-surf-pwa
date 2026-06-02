@@ -1,0 +1,24 @@
+{
+  "name": "Lướt - Khám phá địa điểm",
+  "short_name": "Lướt",
+  "description": "Khám phá nhà hàng, quán cà phê và dịch vụ sửa chữa tại Hà Nội",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5fafa",
+  "theme_color": "#00a67c",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
