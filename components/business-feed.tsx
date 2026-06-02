@@ -15,9 +15,14 @@ export function BusinessFeed({
   selectedCategory, 
   onCategoryChange 
 }: BusinessFeedProps) {
+  console.log('[v0] selectedCategory:', selectedCategory)
+  console.log('[v0] businesses categories:', businesses.map(b => b.category))
+  
   const filteredBusinesses = selectedCategory
     ? businesses.filter((b) => b.category === selectedCategory)
     : businesses
+  
+  console.log('[v0] filteredBusinesses count:', filteredBusinesses.length)
 
   return (
     <div className="space-y-5">
@@ -41,7 +46,10 @@ export function BusinessFeed({
         {categories.map((category) => (
           <button
             key={category.id}
-            onClick={() => onCategoryChange?.(category.id)}
+            onClick={() => {
+              console.log('[v0] Button clicked, category.id:', category.id)
+              onCategoryChange?.(category.id)
+            }}
             className={cn(
               'flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors',
               selectedCategory === category.id
