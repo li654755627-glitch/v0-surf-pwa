@@ -18,9 +18,8 @@ interface CategoryCardsProps {
 
 export function CategoryCards({ onCategoryClick }: CategoryCardsProps) {
   return (
-    <div className="bg-card rounded-2xl p-4 shadow-sm">
-      <div className="grid grid-cols-4 gap-3">
-        {categories.map((category) => {
+    <div className="grid grid-cols-4 gap-3">
+      {categories.map((category) => {
           const Icon = iconMap[category.icon as keyof typeof iconMap]
           return (
             <Link
@@ -46,9 +45,8 @@ export function CategoryCards({ onCategoryClick }: CategoryCardsProps) {
                 {category.nameVi}
               </span>
             </Link>
-          )
-        })}
-      </div>
+        )
+      })}
     </div>
   )
 }
