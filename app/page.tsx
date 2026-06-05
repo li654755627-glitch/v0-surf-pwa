@@ -27,50 +27,47 @@ export default function HomePage() {
   })
 
   return (
-    <div className="min-h-screen">
-      {/* Header + Search Area - Light Gray Background */}
-      <div className="bg-background">
-        {/* Header */}
-        <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 safe-top">
-          <div className="flex items-center justify-between px-4 py-3">
-            <Logo />
-            <CitySelector 
-              selectedCity={selectedCity} 
-              onCityChange={setSelectedCity} 
-            />
-          </div>
-        </header>
-
-        {/* Hero + Search + Categories */}
-        <div className="px-4 space-y-5 pb-6">
-          {/* Hero Text */}
-          <section className="pt-1">
-            <h1 className="text-xl font-bold text-foreground">Tìm quán ăn & dịch vụ gần bạn</h1>
-          </section>
-
-          {/* Search Bar */}
-          <section>
-            <SearchBar 
-              value={searchQuery} 
-              onChange={setSearchQuery} 
-            />
-          </section>
-
-          {/* Category Cards */}
-          <section>
-            <CategoryCards onCategoryClick={setSelectedCategory} />
-          </section>
+    <div className="min-h-screen pb-8">
+      {/* Header */}
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 safe-top">
+        <div className="flex items-center justify-between px-4 py-3">
+          <Logo />
+          <CitySelector 
+            selectedCity={selectedCity} 
+            onCityChange={setSelectedCity} 
+          />
         </div>
-      </div>
+      </header>
 
-      {/* Business Feed Area - White Background */}
-      <div className="bg-card px-4 pt-5 pb-8">
-        <BusinessFeed 
-          businesses={filteredBusinesses}
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-        />
-      </div>
+      {/* Main Content */}
+      <main className="px-4 space-y-6">
+        {/* Hero Text */}
+        <section className="pt-1">
+          <h1 className="text-xl font-bold text-foreground">Tìm quán ăn & dịch vụ gần bạn</h1>
+        </section>
+
+        {/* Search Bar */}
+        <section>
+          <SearchBar 
+            value={searchQuery} 
+            onChange={setSearchQuery} 
+          />
+        </section>
+
+        {/* Category Cards */}
+        <section>
+          <CategoryCards onCategoryClick={setSelectedCategory} />
+        </section>
+
+        {/* Business Feed */}
+        <section>
+          <BusinessFeed 
+            businesses={filteredBusinesses}
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+          />
+        </section>
+      </main>
     </div>
   )
 }
