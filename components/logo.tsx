@@ -10,7 +10,7 @@ export function Logo() {
       </div>
       <div className="flex flex-col">
         <span className="text-xl font-bold text-foreground leading-tight">Lướt</span>
-        <span className="text-xs text-muted-foreground">Khám phá địa điểm</span>
+        <span className="text-xs text-muted-foreground">Sống nhanh, Chọn tốt</span>
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Lướt - Khám phá địa điểm Hà Nội',
+  title: 'Lướt - Sống nhanh, Chọn tốt',
   description: 'Khám phá nhà hàng, quán cà phê và dịch vụ sửa chữa hàng đầu tại Hà Nội',
   generator: 'v0.app',
   manifest: '/manifest.json',
