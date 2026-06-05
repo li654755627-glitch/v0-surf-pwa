@@ -32,7 +32,7 @@ export function CategoryCards({ onCategoryClick }: CategoryCardsProps) {
                   onCategoryClick(category.id)
                 }
               }}
-              className="group flex items-center justify-center"
+              className="group flex flex-col items-center gap-2"
             >
               <div
                 className={cn(
@@ -42,6 +42,9 @@ export function CategoryCards({ onCategoryClick }: CategoryCardsProps) {
               >
                 <Icon className="h-6 w-6 text-primary-foreground" />
               </div>
+              <span className="text-xs font-medium text-foreground text-center leading-tight">
+                {category.nameVi}
+              </span>
             </Link>
           )
         })}
