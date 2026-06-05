@@ -45,7 +45,7 @@ export function BusinessFeed({
             className={cn(
               'flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors',
               selectedCategory === category.id
-                ? 'bg-primary text-primary-foreground shadow-sm'
+                ? `${category.color} text-white shadow-sm`
                 : 'bg-muted text-foreground hover:bg-muted/80'
             )}
           >
