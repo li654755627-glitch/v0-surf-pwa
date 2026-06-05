@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Logo } from '@/components/logo'
 import { CitySelector } from '@/components/city-selector'
 import { SearchBar } from '@/components/search-bar'
 import { CategoryCards } from '@/components/category-cards'
@@ -31,7 +30,7 @@ export default function HomePage() {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 safe-top">
         <div className="flex items-center justify-between px-4 py-3">
-          <Logo />
+          <h1 className="text-base font-bold text-foreground">Sống nhanh, Chọn tốt</h1>
           <CitySelector 
             selectedCity={selectedCity} 
             onCityChange={setSelectedCity} 
@@ -40,12 +39,7 @@ export default function HomePage() {
       </header>
 
       {/* Main Content */}
-      <main className="px-4 space-y-6">
-        {/* Hero Text */}
-        <section className="pt-1">
-          <h1 className="text-sm font-semibold text-foreground">Tìm quán ăn & dịch vụ gần bạn</h1>
-        </section>
-
+      <main className="px-4 space-y-5 pt-2">
         {/* Search Bar */}
         <section>
           <SearchBar 
