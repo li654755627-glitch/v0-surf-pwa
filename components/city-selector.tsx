@@ -29,11 +29,11 @@ export function CitySelector({ selectedCity = 'hanoi', onCityChange }: CitySelec
         <Button 
           variant="ghost" 
           size="sm" 
-          className="h-8 gap-1 px-2 bg-secondary/80 hover:bg-secondary rounded-lg text-foreground"
+          className="h-7 gap-0.5 px-1.5 bg-secondary/80 hover:bg-secondary rounded-md text-foreground"
         >
-          <MapPin className="h-3.5 w-3.5 text-primary" />
-          <span className="text-xs font-medium">{currentCity.name}</span>
-          <ChevronDown className="h-3 w-3 text-muted-foreground" />
+          <MapPin className="h-3 w-3 text-primary" />
+          <span className="text-[11px] font-medium">{currentCity.name}</span>
+          <ChevronDown className="h-2.5 w-2.5 text-muted-foreground" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-40">
